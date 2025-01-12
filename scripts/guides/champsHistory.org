@@ -1,0 +1,81 @@
+#+title: Champs
+
+* Swain
+** Support
+*** Runes
+Electrocute - Cheap shot - Zombie ward/Eyeball collection - Ultimate hunter
+Perfect timing - Biscuit delivery
+AS/AF - AF - x
+
+Glacial augment - Perfect timing - Biscuit delivery - Approach velocity
+Font of life - Bone plating/Second wind
+Manaflow band - Scorch
+AH - x - HP
+
+*** Summoners
+Ignite/Exhaust
+
+** APC
+*** Runes
+Conqueror - Presence of mind - Legend:tenacity/alacrity - Coup de grace/Last stand
+Cosmic insight/Perfect timing - Biscuit delivery
+AS - AF - x
+
+*** Summoners
+Exhaust
+
+
+* Azir
+** Support
+*** Runes
+Electrocute/Hail of blades - Cheap shot - Eyeball collection - Ingenious hunter
+Summon aery - Manaflow band - Transcendence - Scorch
+Conqueror - Presence of mind - Legend:alacrity - Coup de grace
+Biscuit delivery - Cosmic insight/(Perfect timing)
+Taste of blood - 3:x
+AS - AF - x
+*** Summoners
+Exhaust - Ignite
+
+*** Items
+Luden's/Liandry's - Nashor's/(Zhonya's) - Horizon focus/Shadowflame/Void staff - Rabadon's
+Sorcerer's shoes
+
+** Top
+*** Runes
+Conqueror - Presence of mind - Legend:alacrity - Coup de grace
+Biscuit delivery - Cosmic insight
+AS - AF - x
+
+*** Summoners
+Teleport - Ignite
+
+*** Items
+Doran's - Liandry's - Void staff
+Sorcerer's shoes
+
+* Vel'Koz
+** Runes
+Arcane comet - Manaflow band - Transcendence - Scorch
+Biscuit delivery - Cosmic insight
+AF - AF - x
+
+** Summoners
+Ignite
+
+** Items
+Luden's - Horizon focus - Rabadon's/Shadowflame/Void staff
+Sorcerer's shoes
+
+* Ziggs
+** Runes
+Arcane comet - Manaflow band - Transcendence - Scorch
+Biscuit delivery - Cosmic insight
+AF - AF - x
+
+** Summoners
+Ignite
+
+** Items
+Liandry's - Demonic embrace/Horizon focus
+Sorcerer's shoes

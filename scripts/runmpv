@@ -1,0 +1,3 @@
+#! /usr/bin/bash
+
+mpv --shuffle --loop-playlist -fs $(yt-dlp -q --restrict-filenames --exec echo $(xclip -o -selection clipboard))

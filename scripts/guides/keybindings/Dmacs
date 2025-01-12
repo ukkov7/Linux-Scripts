@@ -1,0 +1,284 @@
+spc ... bindings are	Are the leader keybindings
+
+
+SPC B
+
+spc b N	new buffer
+
+spc b p	previous buffer
+
+spc b n	next buffer
+
+spc b i	ibuffer
+
+spc b b	switch to buffer in workspace
+
+spc b B	switch any buffer
+
+spc b u	save file as root
+
+spc b x	popup scratch
+
+spc b X	open scratch
+
+spc b O	kill all other buffers
+
+spc b K	kill all buffers and close their windows
+
+spc b d	kill current buffer
+
+spc b R	rename current buffer
+
+spc b z	bury buffer
+
+spc b Z	kill all buried buffers
+
+spc b m	bookmark buffer
+
+spc b M	unbookmark buffer
+
+spc b c	clone buffer?
+
+
+SPC W
+
+spc w d	kill current window
+
+spc w v	vertical split
+
+spc w V	vertical shift and follow
+
+spc w s	horizontal split
+
+spc w S	horizontal split and follow
+
+spc w r	rotate windows according to cycling order
+
+spc w m m	close other windows
+
+spc w m v	delete windows above and below
+
+spc w m s	delete windows to left and right
+
+spc w h/j/k/l	select window in direction
+
+spc w H/J/K/L	swap window in direction
+
+spc w w	next window in cycling order
+
+spc w W	previous window in cycling order
+
+spc w o	shrink other windows
+
+spc w =	balance the sizes of windows
+
+# spc w _	set window height to # lines
+
+# spc w -	reduce window height by # lines
+
+# spc w +	increase window height by # lines
+
+# spc w |	set window width to # lines
+
+# spc w >	increase window width by # lines
+
+# spc w <	decrease window width by # lines
+
+
+SPC H 
+
+spc h r r	reload emacs
+
+spc h b b	shows describe-bindings
+
+spc h k	describes the specified combination
+
+spc h w	show keybindings for specified command
+
+spc h x	show commands
+
+spc h f	show functions
+
+spc h v	show variables
+
+spc h o	show variables and functions
+
+
+SPC T
+
+spc t l	toggle line numbers
+
+spc t r	toggle read-only of file
+
+spc t I	toggle between tabs and spaces indentation style
+
+
+SPC TAB
+
+spc tab 1-9	switch to workspace 1-9
+
+spc tab 0	switch to last workspace
+
+spc tab r	rename current workspace
+
+spc tab d	delete current workspace
+
+spc tab s	save current workspace
+
+spc tab n	create a new workspace
+
+spc tab N	create a new workspace with a name
+
+spc tab tab	display list of workspaces
+
+spc tab l	load a workspace
+
+spc tab [	previous workspace
+
+spc tab ]	next workspace
+
+
+SPC F
+
+spc f u	find sudo
+
+spc f U	open current file as root
+
+spc f s	save current file
+
+spc f S	save current file with a filename
+
+spc f r	recent files
+
+spc f R	move current file to
+
+spc f P	browse doom config files
+
+spc f f	find file in current directory
+
+spc f F	find file in current recursive directory
+
+spc f d	open current
+
+spc f C	copy current file to
+
+
+SPC O
+
+spc o E	open eshell
+
+spc o e	popup eshell
+
+spc o T	open vterm
+
+spc o t	popup vterm
+
+spc o -	open current directory in dired
+
+
+DIRED
+
+- in dired	go back one folder
+
++ in dired	create a new directory
+
+d in dired	mark files for deletion
+
+x in dired	delete files marked for deletion
+
+M in dired	change permissions
+
+o in dired	sort by modes
+
+O in dired	change owner
+
+m in dired	mark files or directories
+
+u in dired	unmark files or directories
+
+U in dired	unmark all
+
+t in dired	invert selection
+
+C in dired	copy
+
+R in dired	move
+
+( in dired	simple view
+
+* in dired	mark all directories
+
+i in dired	edit name
+
+r in dired	refresh
+
+q in dired	kill all dired buffers
+
+spc . in dired	create a new file
+
+= in dired	diff files
+
+spc m h in dired	toggle hidden files
+
+g O in dired	visit file/directory in a new window
+
+% m in dired	mark file with regexp
+
+
+SPC P
+
+spc p X	open project scratch
+
+spc p x	popup project scratch
+
+spc p s	save all project buffers
+
+spc p k	kill all project buffers
+
+spc p p	switch project
+
+spc p r	recent files in project
+
+spc p f	find file in project
+
+spc p >	find file in a specified project
+
+spc p .	browse files in current project's root
+
+spc p F	find file in a specified project
+
+spc p b	switch to project buffer?
+
+spc p a	add project to the list of known projects
+
+spc p d	remove project from the list of known projects
+
+spc p !	shell command from project root
+
+
+SPC S
+
+spc s m	jump to a bookmark
+
+spc s p	search in current project
+
+spc s P	search in a specified project
+
+spc s d	search recursively in current directory
+
+spc s D	search recursively in a specified directory
+
+
+OTHERS
+
+spc ret	bookmark browser
+
+key ?/C-h	shows all possible combinations
+
+spc q s quick-save session
+
+spc q S save session
+
+spc q l quick-load session
+
+spc q L load session

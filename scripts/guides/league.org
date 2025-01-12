@@ -1,0 +1,226 @@
+#+title: League
+
+| Term               | Definition                                                        |
+|--------------------+-------------------------------------------------------------------|
+| Peeling            | Forcing a disengage between two champions                         |
+| Rubber banding     | The accelerated EXP in jg in relation to level discrepancy        |
+| Play with the wave | Stand inside minion wave to dodge spells and utilise minion aggro |
+| Sustaining a lane  | Keeping the minion count even to maintain a freeze                |
+| Locked lane        | A lane that has been frozen for a long time                       |
+| Tempo              | Constant oppressive pressure                                      |
+
+Peeling is useful when you want to protect a hard carry E.g. jinx from an engager
+
+Splitpush?
+
+Warding?
+
+Roaming?
+
+Comps AKA team compositions? (pick, engage)
+
+Juggernauts?
+
+When to take objectives?
+
+How and when to gank?
+
+Counterjungling?
+
+Which junglers can outduel which?
+
+Each champions strengths and weaknesses? (early-mid-late game, tankiness, peel-capability, engaging/disengaging, poke/dps, enchantments/utility, roaming/movement, trading, picking, cooldown, frontlining, range)
+
+"When 0/5 in lane your jungler probably won't and shouldn't gank you."
+
+"Instead of jg coming to bail you out, they should help out the other lanes"
+
+Secure vision around dragons about a minute before spawn. Any recalls about a minute before dragon. Pop enemy blast cones. If enemy gets low don't chase since they are virtually useless anyway.
+
+If mid minions come back disjointedly the jungler probably creepblocked them
+
+Losing gracefully?
+
+A solo lane is generally lost at 2 deaths
+
+Junglers should play through the lane that's ahead
+
+Optimal jungle routing?
+
+"If you survive a burst mage's full combo don't run away"
+
+"As a jungler always look at the map"
+
+Counterganking?
+
+An enemy's thornmail or sunfire can cause the turret to target them
+
+Untarget from caitlyn ult after the channeling is finished to prevent the refund
+
+Ping yourself if nocturne ults at you
+
+Deny last hits
+
+Knowing your powerspikes
+
+The contribution timer is 13 seconds
+
+Inactive plants take a minute to become usable
+
+Plant respawn time is about 6 minutes
+
+First vision plant spawns at about 3:00
+
+The inner blast cone spawns at about 1:15
+
+The outer blast cone spawns at about 5:00
+
+First honey fruit spawns at about 6:00
+
+Freezing?
+
+Don't destroy inhib if you aren't going to need access to their base or don't have significant lead
+
+Snowballing?
+
+Switching lanes?
+
+Laning phase?
+
+Diving?
+
+When pinging ss ping the champion as well
+
+Make sure not to steal exp as a jungler
+
+Try to find ganks where your laners get to 6 first
+
+Timing your camp spawn timers
+
+Be careful if enemy jg can gank at level 2
+
+Junglers should ping their pathings
+
+When ganking bot ping the target of the gank
+
+Midlaners can ward enemy raptors before minions arrive
+
+When picking hybrid champs declare your damage type in chat
+
+Fake roaming or warding?
+
+Threatening to gank to allow laners wave control?
+
+During midgame teams can pressure two lanes at once to challenge the enemy's coordination
+
+Always consider mercs or plateds if cc or AAs bother you a lot
+
+Invade if you have way better lvl 1 and get vision or picks
+
+Force roaming laners to stay if a skirmish is starting elsewhere
+
+When you are bot try to place good tp wards behind the enemy
+
+Avoid letting an early game laner bait you to push
+
+Shove wave after every succesful gank (where enemy is killed or backs) even possibly getting help from your jungler (or is freezing also an option?)
+
+Big minimap
+
+Use your function keys to track teammates
+
+If your laner is losing you shouldn't destroy their turret with the rift herald since they won't then have a lane
+
+Don't make ganks obvious
+
+As a jungler either ward the otherside of the map or the enemy's jungle
+
+When playing against camouflage champs place wards down during a fight if they haven't appeared yet
+
+Ward over wall when enemy has zac, rek'sai or shaco
+
+Get oracles for all invis champs
+
+When game starts position every team member so that enemy doesn't get off wards or invades
+Specifically cover the two pairs of openings and 1 covers mid for flanks
+
+If enemy invades before minions then try to invade the opposite side
+
+Laners should try to setup to help at scuttle
+
+Ping where enemy jg starts
+
+You can bait enemy jg and waste their time
+
+Win conditions?
+
+Type cooldowns of summoners or ults every minute
+
+Pink a gank path for you jungler
+
+Itemization
+
+Settings!
+
+Pink ward locations?
+
+Gold value of a level gain is about 600g
+
+To check who got healed you can check for the debuff that lasts for 35s
+
+After winning a teamfight you should crash waves and possibly take turrets, secure objectives, counter jungle or reset for tempo
+
+Try to match your reset timers in late game
+
+Junglers finish full clear at about 3:00
+
+Third wave top gives level 3 (what about bot?)
+
+If you don't have great snowball you should take turrets all of the turrets in tier order (lawnmoving)
+
+Spam refillable or corrupting at fountain since it gives buff and refills
+
+Sweeper refreshes when picking up herald
+
+Turrets have early shield
+
+You can buy dark seal while dead and the assists will count and you can also refund it
+
+You can place pinks on blast cones and thresh lanterns to make them harder to click
+
+If you want to deny your opponent a big crashing wave you can 1 for 1 him under tower
+
+Having a melter is important for your comp
+
+A teleport moves the champion to the side of target pointing at their fountain
+
+Shadowing?
+
+When top has a lot of prio he can easily come help invade or take herald after a crash
+
+A diverse comp is also important for ganking capabilities
+
+To perform a gank you need to know if the enemy is pushed far enough, if a counter gank is possible and do you have enough combined cc and damage
+
+While a ward is targetable you can check from it's buff who placed it
+
+While kiting jg camps only move away after their attack animation has ended
+
+Fountain to pit takes about 25 seconds
+
+Fountain to lane takes about 23 seconds
+
+Fountain to mid, bot to mid and top to mid take about 16 seconds
+
+Across the map takes about 35 seconds
+
+Homestart gives 50% ms boost to all champs returning to fountain until 5:00
+
+If an attack is inputted before it's ready you will walk further into the target due to this you should only input attacks when they are ready when kiting and
+you might also have to move away from an enemy that does it itself
+
+The two types of pushes are slow and fast push
+
+Slow push is stacking the wave by doing minimal damage
+
+Fast push is doing a slow push but you attack the minions a certain amount

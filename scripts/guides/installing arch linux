@@ -1,0 +1,90 @@
+
+
+timedatectl set-ntp true
+
+fdisk/dev/sda (the target disk)
+
+g
+
+n
+
+enter, enter, +550M
+
+n
+
+enter, enter, +4G
+
+n
+
+enter, enter, enter
+
+t
+
+1, 1
+
+t
+
+2, 19
+
+T
+
+3, 23
+
+w
+
+mkfs.fat -F32 /dev/sda1
+
+mkswap /dev/sda2
+
+swapon /dev/sda2
+
+mkfs.ext4 /dev/sda3
+
+mount /dev/sda3 /mnt
+
+Mount --mkdir /dev/sda1 /mnt/boot
+
+pacstrap /mnt base linux linux-firmware
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+
+ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
+
+hwclock --systohc
+
+pacman -S sudo efibootmgr networkmanager gvim amd-ucode
+
+Vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+
+locale-gen
+
+Vim /etc/hostname (type hostname)
+
+nano /etc/hosts
+127.0.0.1 localhost
+::1 localhost
+127.0.1.1 "hostname".localdomain "hostname"
+
+passwd
+
+useradd -m "username"
+
+passwd "username"
+
+usermod -aG wheel,audio,video,optical,storage "username"
+
+visudo (uncomment %wheel ALL=(ALL) ALL
+
+blkid
+Efistub with microcode
+initrd=\amd-ucode initrd...
+
+systemctl enable NetworkManager
+
+exit
+
+umount -R /mnt
+
+reboot

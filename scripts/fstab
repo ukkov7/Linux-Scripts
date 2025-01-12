@@ -1,0 +1,18 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda3
+UUID=48363977-a99d-4a15-9ffc-49b6f1c735e1	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda1
+UUID=95E5-BF06      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda2
+UUID=a38144ac-b7e3-4dee-a160-5a20774ce63d	none      	swap      	defaults  	0 0
+
+# /dev/sdb1
+UUID=F036EDCE36ED963E	/home/ukko/HDD      	ntfs3      	defaults  	0 2
+
+# /dev/sdc1
+UUID=8A13-639B	/home/ukko/Backup      	vfat      	defaults  	0 2

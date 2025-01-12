@@ -1,0 +1,24 @@
+alt p   dmenu
+alt shift ret   cmd
+alt b   toggle bar
+alt t   tiled layout
+alt m   monocle layout
+alt f   floating layout
+alt spc   previous layout
+alt shift spc   toggle between tiled and floating for focus
+alt shift c close focus
+alt j   focus next window clockwise
+alt k   focus next window counter-clockwise
+alt i   increase number of master windows
+alt d   decrease number of master windows
+alt l   increase master area size
+alt h   decrease master area size
+alt ret swap for master and stack
+alt shift # apply new tag to window
+alt #   view tag
+alt tab previous tag
+alt shift 0 apply all tags to window
+alt C-shift #   apply additional tag to window
+alt 0   view all windows
+alt C-# remove tag while viewing all windows
+alt shift q quit dwm

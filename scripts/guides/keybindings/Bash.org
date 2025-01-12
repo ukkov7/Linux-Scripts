@@ -1,0 +1,63 @@
+* Bash movement
+| Shortcut           | Action                                            |
+|--------------------+---------------------------------------------------|
+| ctrl + a           | Beginning of line                                 |
+| ctrl + e           | End of line                                       |
+| ctrl + p           | Previous command                                  |
+| ctrl + n           | Next command                                      |
+| alt + b            | Back a word                                       |
+| alt + f            | Forward a word                                    |
+| ctrl + f           | Forward a character                               |
+| ctrl + b           | Back a character                                  |
+| ctrl + xx          | Toggle between start of line and current position |
+| ctrl + ] + x       | Next occurrance of x                              |
+| alt + ctrl + ] + x | Previous occurrance of x                          |
+
+* Bash editing
+| Shortcut  | Action                                    |
+|-----------+-------------------------------------------|
+| ctrl + l  | Clear screen                              |
+|           |                                           |
+| alt + bsp | Delete word before cursor                 |
+| alt + d   | Delete word after cursor                  |
+| ctrl + d  | Delete word under cursor                  |
+| ctrl + h  | Delete character before cursor            |
+|           |                                           |
+| ctrl + w  | Cut word before cursor                    |
+| ctrl + k  | cut line after cursor                     |
+| ctrl + u  | Cut line before cursor                    |
+|           |                                           |
+| alt + t   | Swap current word with previous           |
+| ctrl + t  | Swap last the characters before cursor    |
+| esc + t   | Swap last two words before cursor         |
+|           |                                           |
+| ctrl + y  | Paste                                     |
+| alt + u   | Uppercase to end of word                  |
+| alt + l   | Lowercase to end of word                  |
+| alt + c   | Uppercase character and go to end of line |
+| alt + r   | Delete whole line                         |
+
+* Bash history
+| Shortcut | Action                                |
+|----------+---------------------------------------|
+| ctrl + r | Search command history                |
+|          |                                       |
+| !!       | Repeat last command                   |
+| !:n      | Repeat nth argument                   |
+| !:n:m    | Repeat arguments n to m               |
+| !:n:$    | Repeat from nth argument to last      |
+| !n:p     | Print last command starting with n    |
+| !x       | Repeat last command beginning with x  |
+| !:q      | Repeat last command with quotes       |
+| !$       | Repeat last argument of last command  |
+| !*       | Repeat all arguments of last command  |
+| ^x^y     | Run last command and replace x with y |
+
+* Bash process control
+| Shortcut | Action                                   |
+|----------+------------------------------------------|
+| ctrl + c | Kill execution                           |
+| ctrl + s | Stop output to screen                    |
+| ctrl + q | Enable output to screen                  |
+| ctrl + d | Close shell                              |
+| ctrl + z | Suspend execution and send to background |

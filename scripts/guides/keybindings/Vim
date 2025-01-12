@@ -1,0 +1,252 @@
+~	swap case
+
+H	go to top of screen
+M	go to middle of screen
+L	go to bottom of screen
+
+zz	center cursor on screen
+C-e	scroll screen down
+C-y	scroll screen up
+C-b	move up a screen
+C-f	move down a screen
+C-d	move up half a screen
+C-u	move down half a screen
+
+I	insert at the beginning of the line
+A	append at the end of the line
+o	append a line below current
+O	append a line above current
+
+C-w in insert mode	delete word before cursor
+C-t in insert mode	indent line
+C-d in insert mode	deindent line
+C-rx in insert mode	put contents of register x
+C-o in insert mode	enter normal mode to issue a command
+
+r	replace a character
+R	replace
+J	join line below with a space between
+gJ	join line below
+C-r	redo
+.	repeat last command
+
+V	linewise visual mode
+C-v	blockwise visual mode
+o in visual mode	move to other end of selection
+O in blockwise visual mode	move to adjacent corner of block
+
+~ in visual mode	invert case
+u in visual mode	make lowercase
+U in visual mode	make uppercase
+
+:reg	show registers
+"xy	yank into register x
+"xp	put contents of register x
+
+Registers are persistent
+
+0 register	last yank
+" register	last delete or yank
+% register	current file path
+# register	alternate file name
+* register	primary selection
++ register	clipboard
+/ register	last search
+. register	last insertion
+: register	last command line
+- register	last delete less than a line
+
+p	put clipboard after cursor
+P	put clipboard before cursor
+gp	reselect last pasted region in visual mode
+x	delete character
+
+
+MARKS AND POSITIONS
+
+`	jumps to accurate location
+'	jumps to first non-blank character on the same line
+
+:marks	list of marks
+ma	set mark a
+:delmarks a	delete mark a
+:delmarks a-z	delete marks a-z
+:delmarks!	delete all marks
+`a motion	jump to mark a
+]' motion	jump to next line with mark
+[' motion	jump to previous line with mark
+]` motion	jump to next mark
+[` motion	jump to previous mark
+
+0 mark	last position of exit while editing
+" mark	last position of exit
+. mark	last change position of current file
+''	jump to previous line
+``	jump to previous position
+[ mark	beginning of previous delete or yank
+] mark	end of previous delete or yank
+< mark	beginning of last visual selection
+> mark	end of last visual selection
+
+/	search
+?	search backwards
+n	repeat search
+N	repeat search backwards
+
+
+OPERATOR
+
+c operator	change
+d operator	delete
+y operator	yank
+g~ operator	invert case
+gu operator	make lowercase
+gU operator	make uppercase
+> operator	shift right
+< operator	shift left
+= operator	re-indent
+
+Using an operator twice makes	Makes it affect the entire line
+
+
+JUMPS
+
+C-o	older cursor position in jump list
+C-i	newer cursor position in jump list
+:ju	display jump list
+:cle	clear jump list
+g;	older cursor position in change list
+g,	newer cursor position in change list
+
+
+MOTION
+
+LEFT-RIGHT MOTIONS
+
+0 motion	first character of the line
+^ motion	first non-blank character of the line
+$ motion	end of the line
+g_ motion	last non-blank character
+g0 motion	first character of the screen line
+g^ motion	first non-blank character of the screen line
+gm motion	middle of the screen line
+gM motion	halfway of the text of the line
+g$ motion	last character of the screen line
+#| motion	to #th column
+f{char} motion	to first {char} to the right
+F{char} motion	to first {char} to the left
+t{char} motion	before first {char} to the right
+T{char} motion	before first {char} to the left
+s{char,char} motion to first {char,char} to the right outside operator mode
+S{char,char} motion to first {char,char} to the left outside operator mode
+z{char,char} motion to first {char,char} to the right in operator mode
+Z{char,char} motion to first {char,char} to the left in operator mode
+x{char,char} motion to before first {char,char} to the right in operator mode
+X{char,char} motion to before first {char,char} to the left in operator mode
+; motion	repeat last occurrance motion
+, motion	repeat last occurrance motion backwards
+
+
+UP-DOWN MOTIONS
+
+gk motion	up a screen line
+gj motion	down a screen line
+- motion	first non-blank character up a line
++ motion	first non-blank character down a line
+G motion	go to last line
+gg motion	go to first line
+:# motion	go to nth line
+#% motion	first non-blank character of # percentage of file
+
+
+WORD MOTIONS
+
+w motion	word forward
+W motion	word forward disregarding punctuation
+e motion	to end of word
+E motion	to end of word disregarding punctuation
+b motion	word backward
+B motion	word backward disregarding punctuation
+ge motion	backward to end of word
+gE motion	backward to end of word disregarding punctuation
+
+
+TEXT OBJECT MOTIONS
+
+( motion	sentence backward
+) motion	sentence forward
+{ motion	paragraph backward
+} motion	paragraph forward
+
+A sentence is	Is defined as ending at ./!/? followed by \n/spc/tab
+
+A paragraph begins	Begins after each set of empty lines
+
+
+TEXT OBJECT SELECTION
+
+To operate on a word (w), a word disregarding punctuation (W), a sentence (s), a paragraph (p) or ""''``(){}<>[] use	Use "a" or "i" with the object after an operator or in visual mode
+
+REGEXPS
+
+RANGE OF OPERATION, LINE ADDRESSING AND MARKS
+
+# address   line number
+. address	current line
+$ address	last line
+% address	whole file
+/pattern/	address next line where pattern matches
+?pattern?	address previous line where pattern matches
+/pattern/;/pattern/	address jump to first and search second
+use +/- after address to deviate by line
+to indicate address range use a comma
+\& address	next line where previous substitute pattern matches
+\? address	previous line where previous substitute pattern matches
+colon as delimiter
+
+
+ANCHORS
+
+to select a word use \< and \>
+^ anchor    beginning of line
+$ anchor    end of line
+i option    ignore case
+to define a class of characters use [ and ]
+
+
+ESCAPED CHARACTERS AKA METACHARACTERS
+
+. metacharacter any character except new line
+\s metacharacter    whitespace
+\d metacharacter    digit
+\a metacharacter    alphabetic character
+\I metacharacter    lowercase character
+\u metacharacter    uppercase character
+\S metacharacter    non-whitespace character
+\D metacharacter    non-digit
+\A metacharacter    non-alphabetic character
+\L metacharacter    non-lowercase character
+\U metacharacter    non-uppercase character
+
+
+QUANTIFIERS, GREEDY AND NON-GREEDY
+
+* quantifier    matches everything
+\+ quantifier   matches at least 1 character
+\= quantifier   matches characters
+\{#\#} quantifier   matches characters range times
+\{#} quantifier matches characters # times
+\{,#} quantifier    matches at most # characters
+\{#,} quantifier    matches at least # characters
+\{-} quantifier matches as few as possible before
+\{-#, #} quantifier matches at least # characters before
+\{-n,} quantifier   match at least # characters before
+\{-,m} quantifier   match at most # characters before
+
+
+
+MISC MOTIONS
+
+% motion	jump to limiter match of current or next limiter
+
+#	search for next word under cursor

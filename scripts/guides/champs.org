@@ -1,0 +1,137 @@
+#+title: Champs
+
+* Swain
+** Support
+*** Runes
+Electrocute - Cheap shot - Zombie ward/Eyeball collection - Ultimate hunter
+Perfect timing - Biscuit delivery
+AS - AF - x
+
+Glacial augment - Perfect timing - Biscuit delivery - Approach velocity
+Font of life - Bone plating/Second wind
+Manaflow band - Scorch
+AH - x - HP
+
+*** Summoners
+Ignite/Exhaust
+
+*** Items
+Zhonya's - Liandry's - Demonic embrace/Rylai's - Rabadon's
+Rylai's - Liandry's - Demonic embrace - Zhonya's/Rabadon's
+Sorcerer's shoes/Boots of swiftness
+
+** APC
+*** Runes
+Conqueror - Presence of mind - Legend:tenacity/alacrity - Coup de grace/Last stand
+Cosmic insight/Perfect timing - Biscuit delivery
+AS - AF - x
+
+*** Summoners
+Exhaust
+
+*** Items
+Liandry's - Zhonya's - Demonic embrace - Rabadon's
+Sorcerer's shoes/Boots of swiftness
+
+** Misc
+Ingenious/treasure hunter?
+Double AF?
+Revitalize?
+
+
+* Azir
+** Support
+*** Runes
+Electrocute/Hail of blades - Cheap shot - Eyeball collection - Ingenious hunter
+Summon aery - Manaflow band - Transcendence - Scorch
+Conqueror/Lethal tempo - Presence of mind - Legend:alacrity - Coup de grace
+Biscuit delivery - Cosmic insight/(Perfect timing)
+Taste of blood - 3:x
+AS - AF - x
+*** Summoners
+Exhaust - Ignite
+
+*** Items
+Luden's/Liandry's - Nashor's/(Zhonya's) - Horizon focus/Shadowflame/Void staff - Rabadon's
+Sorcerer's shoes
+
+** Top
+*** Runes
+Conqueror - Presence of mind - Legend:alacrity - Coup de grace/Last stand
+Biscuit delivery/Magical footwear - Cosmic insight
+Transcendence - Scorch
+AS - AF - x
+
+Summon aery/Arcane comet - Manaflow band - Transcendence - Scorch
+Cheap shot - Ingenious hunter
+AS - AF - x
+
+*** Summoners
+Teleport - Ignite/Exhaust
+
+*** Items
+Doran's - Liandry's/Luden's - Zhonya's/Void staff/Shadowflame/Rylai's/Cosmic drive
+Sorcerer's shoes/Boots of lucidity
+
+** Misc
+Cosmic drive?
+Rylai's?
+Boots of lucidity?
+
+
+* Vel'Koz
+** Runes
+Arcane comet - Manaflow band - Absolute focus/Transcendence - Scorch
+Biscuit delivery - Cosmic insight
+AF - AF - x
+
+** Summoners
+Ignite
+
+** Items
+Luden's/Liandry's/Imperial mandate - Horizon focus - Rabadon's/Shadowflame/Void staff
+Sorcerer's shoes
+
+* Ziggs
+** Runes
+Arcane comet - Manaflow band - Transcendence - Scorch
+Biscuit delivery - Cosmic insight
+AF - AF - x
+
+** Summoners
+Ignite
+
+** Items
+Liandry's/Luden's - Demonic embrace/Horizon focus - Rabadon's/Shadowflame/Void staff
+Sorcerer's shoes
+
+* Lillia
+** Runes
+Dark harvest - Cheap shot - Eyeball collection - Treasure hunter
+Magical footwear - Cosmic insight
+AS - AF - x
+
+** Items
+Liandry's - Zhonya's/Demonic embrace - Rylai's - Rabadon's
+Sorcerer's shoes
+
+** Clear
+Solo raptors or bot side leash
+Full clear
+q,w,q,e
+Always blue with gromp
+
+* Jarvan IV
+** Runes
+Conqueror - Triumph - Legend:alacrity/tenacity - Coup de grace/Last stand
+Magical footwear - Cosmic insight
+AS - AF - x
+
+** Items
+Red - Goredrinker - Death's dance/Guardian angel/Maw/Thornmail/Randuin's/Black cleaver
+Defensive boots
+
+** Clear
+Solo buff or get bot leash
+e,q,w and q,w,e or q,e,w
+Blue with gromp possible

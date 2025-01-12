@@ -1,0 +1,80 @@
+
+
+sudo pacman -S git base-devel alacritty nitrogen gnome-backgrounds cups system-config-printer mpv yt-dlp xorg xorg-xinit qutebrowser pipewire pipewire-pulse pipewire-alsa dmenu qbittorrent python-adblock cmake piper flameshot thunderbird
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+Cd
+Git clone https://git.suckless.org/dwm
+Cd dwm
+change terminal to alacritty through config.def.h
+Make
+Sudo Make install
+create ~/.xinitrc
+xrandr --output DVI-D-1 --mode 1920x1080 --rate 144 --left-of HDMI-1; xset r rate 200 30; nitrogen --restore; exec dwm
+
+Sudo reboot
+Startx
+
+customize by modifying config.h and sudo make install
+
+nano /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+
+Section "InputClass" Identifier "My Mouse" MatchIsPointer "yes" # set the following to 1 1 0 respectively to disable acceleration. Option "AccelerationNumerator" "1" Option "AccelerationDenominator" "1" Option "AccelerationThreshold" "0" EndSection
+
+yay -S libhandy-git brother-hll2350dw anki
+Sudo systemctl enable --now cups
+
+Nano ~/.asoundrc
+defaults.pcm.card 1
+defaults.ctl.card 1
+
+Automount
+Lsblk -f
+/Etc/fstab
+Defaults as options and 2 for last number
+
+Use google search engine and start page
+For searches use https://www.google.com/search?hl=en&q={}
+Qutebrowser adblock
+Config-edit
+Hide bars script
+Config-source
+
+Warp patch
+
+(Default zoom)
+
+install emacs ripgrep fd
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+.emacs.d/bin/doom install
+vim ~/.bashrc
+export PATH="$HOME/.emacs.d/bin:$PATH"
+source .bashrc
+doom sync
+(vim ~/.xinitrc
+/usr/bin/emacs --daemon;
+vim ~/.bashrc
+alias emacs="emacsclient -c -a 'emacs'"
+source .bashrc
+create an executable
+Vim /bin/dmacs
+emacsclient -c -a 'emacs'
+chmod +x /bin/dmacs)
+
+(Auto startx
+Vim ~/.bash_profile
+Xinit archwiki)
+
+(Autologin
+Systemctl edit getty@tty1.service
+Dont change type
+Getty archwiki)
+
+(Autostart applications
+Autostart patch
+Create ~/.dwm/autostart.sh
+And make executable
+
+Dont forget to reboot every now and then

@@ -1,0 +1,89 @@
+M-x org-info = manual
+
+spc-m-h (org-toggle-heading)
+
+spc-m-i (org-toggle-item)
+
+tab folds
+
+shift+tab fold all
+
+shift+tab unfolds all level-by-level
+
+g-(j/k) move to element
+
+g-(h/l) next child/parent
+
+C-RET create next heading with same level
+
+M-(h/l) promoto or unpromote
+
+M-(k/j) move whole tree
+
+M-S-(k/j) move only element
+
+To select an element you can use
+the org mode text-object "e"
+
+To select a subtree you can use
+the org mode text-object "R"
+
+To make a table delimit and surround with |
+
+C-RET next row of table
+
+spc-m-b-\- create new table headline
+
+S-RET duplicate field as next cell
+
+M-(k/j) move row
+
+M-(h/l) move column
+
+M-S-(l/h) expand/delete new column
+
+M-S-(j/k) expand/delete new row
+
+spc-i-s insert snippet
+
+Using TODO as an identifier
+causes it to be transitive
+
+RET on a TODO element buries it
+
+spc-m-t toggle generic identifiers
+
+S-*horizontal arrow key* remove/restore
+generic identifier
+
+spc-m-d-s org-schedule?
+
+To switch between months in org-schedule use shift-arrow key
+
+To give org-schedule a time just type it
+
+[  ] creates a checkbox
+
+RET check checkbox
+
+RET RET bury checkbox
+
+[%\//] track complete tasks
+
+C-c-[ move to front of agenda
+
+spc-o-a org-agenda
+
+to create a source block use <s
+
++/- creates an unordered list
+
+numbers create ordered lists
+
+you have to specify the language after the #+BEGIN_SRC
+
+tangle creates a file out of all source code blocks
+
+To use tangle create #+PROPERTY: header-args :tangle *filename*
+
+M-x: org-babel-tangle tangles the org file
