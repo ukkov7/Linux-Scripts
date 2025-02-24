@@ -1,0 +1,385 @@
+75d74
+<       const int ch;
+93c92
+<       int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;
+---
+>       int basew, baseh, incw, inch, maxw, maxh, minw, minh;
+145,152d143
+<
+< static void musicchannel(const Arg *arg);
+< static void realshit(const Arg* arg);
+< static void prerun();
+< static void sendKeyEvent();
+< /* static void defining(); */
+< /* static void runProgram(); */
+<
+187c178
+< /* static void incnmaster(const Arg *arg); */
+---
+> static void incnmaster(const Arg *arg);
+197c188
+< static void pop(Client *c);
+---
+> static void pop(Client *);
+221c212
+< static void tile(Monitor *m);
+---
+> static void tile(Monitor *);
+240d230
+< static void warp(const Client *c);
+253c243
+< static int bh;               /* bar height */
+---
+> static int bh, blw = 0;      /* bar geometry */
+358,359d347
+<               if (!c->hintsvalid)
+<                       updatesizehints(c);
+453c441
+<               } else if (ev->x < x + TEXTW(selmon->ltsymbol))
+---
+>               } else if (ev->x < x + blw)
+502d489
+<       free(scheme);
+744c731
+<       w = TEXTW(m->ltsymbol);
+---
+>       w = blw = TEXTW(m->ltsymbol);
+847d833
+<       warp(selmon->sel);
+932c918
+<       if (name.encoding == XA_STRING) {
+---
+>       if (name.encoding == XA_STRING)
+934,936c920,924
+<       } else if (XmbTextPropertyToTextList(dpy, &name, &list, &n) >= Success && n > 0 && *list) {
+<               strncpy(text, *list, size - 1);
+<               XFreeStringList(list);
+---
+>       else {
+>               if (XmbTextPropertyToTextList(dpy, &name, &list, &n) >= Success && n > 0 && *list) {
+>                       strncpy(text, *list, size - 1);
+>                       XFreeStringList(list);
+>               }
+982,987c970,975
+< /* void */
+< /* incnmaster(const Arg *arg) */
+< /* { */
+< /*    selmon->nmaster = MAX(selmon->nmaster + arg->i, 0); */
+< /*    arrange(selmon); */
+< /* } */
+---
+> void
+> incnmaster(const Arg *arg)
+> {
+>       selmon->nmaster = MAX(selmon->nmaster + arg->i, 0);
+>       arrange(selmon);
+> }
+1058,1063c1046,1053
+<       if (c->x + WIDTH(c) > c->mon->wx + c->mon->ww)
+<               c->x = c->mon->wx + c->mon->ww - WIDTH(c);
+<       if (c->y + HEIGHT(c) > c->mon->wy + c->mon->wh)
+<               c->y = c->mon->wy + c->mon->wh - HEIGHT(c);
+<       c->x = MAX(c->x, c->mon->wx);
+<       c->y = MAX(c->y, c->mon->wy);
+---
+>       if (c->x + WIDTH(c) > c->mon->mx + c->mon->mw)
+>               c->x = c->mon->mx + c->mon->mw - WIDTH(c);
+>       if (c->y + HEIGHT(c) > c->mon->my + c->mon->mh)
+>               c->y = c->mon->my + c->mon->mh - HEIGHT(c);
+>       c->x = MAX(c->x, c->mon->mx);
+>       /* only fix client y-offset, if the client center might cover the bar */
+>       c->y = MAX(c->y, ((c->mon->by == c->mon->my) && (c->x + (c->w / 2) >= c->mon->wx)
+>               && (c->x + (c->w / 2) < c->mon->wx + c->mon->ww)) ? bh : c->mon->my);
+1109c1099,1101
+<       if (!XGetWindowAttributes(dpy, ev->window, &wa) || wa.override_redirect)
+---
+>       if (!XGetWindowAttributes(dpy, ev->window, &wa))
+>               return;
+>       if (wa.override_redirect)
+1243c1235
+<                       c->hintsvalid = 0;
+---
+>                       updatesizehints(c);
+1382,1383d1373
+<       if (m == selmon && (m->tagset[m->seltags] & m->sel->tags) && selmon->lt[selmon->sellt] != &layouts[2])
+<               warp(m->sel);
+1612a1603
+>
+1654a1646,1647
+>       if (arg->v == dmenucmd)
+>               dmenumon[0] = '0' + selmon->num;
+1660c1653,1655
+<               die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
+---
+>               fprintf(stderr, "dwm: execvp %s", ((char **)arg->v)[0]);
+>               perror(" failed");
+>               exit(EXIT_SUCCESS);
+1785d1779
+<               XSelectInput(dpy, c->win, NoEventMask);
+1883,1903c1877,1883
+<
+<               /* new monitors if nn > n */
+<               for (i = n; i < nn; i++) {
+<                       for (m = mons; m && m->next; m = m->next);
+<                       if (m)
+<                               m->next = createmon();
+<                       else
+<                               mons = createmon();
+<               }
+<               for (i = 0, m = mons; i < nn && m; m = m->next, i++)
+<                       if (i >= n
+<                       || unique[i].x_org != m->mx || unique[i].y_org != m->my
+<                       || unique[i].width != m->mw || unique[i].height != m->mh)
+<                       {
+<                               dirty = 1;
+<                               m->num = i;
+<                               m->mx = m->wx = unique[i].x_org;
+<                               m->my = m->wy = unique[i].y_org;
+<                               m->mw = m->ww = unique[i].width;
+<                               m->mh = m->wh = unique[i].height;
+<                               updatebarpos(m);
+---
+>               if (n <= nn) { /* new monitors available */
+>                       for (i = 0; i < (nn - n); i++) {
+>                               for (m = mons; m && m->next; m = m->next);
+>                               if (m)
+>                                       m->next = createmon();
+>                               else
+>                                       mons = createmon();
+1905,1914c1885,1911
+<               /* removed monitors if n > nn */
+<               for (i = nn; i < n; i++) {
+<                       for (m = mons; m && m->next; m = m->next);
+<                       while ((c = m->clients)) {
+<                               dirty = 1;
+<                               m->clients = c->next;
+<                               detachstack(c);
+<                               c->mon = mons;
+<                               attach(c);
+<                               attachstack(c);
+---
+>                       for (i = 0, m = mons; i < nn && m; m = m->next, i++)
+>                               if (i >= n
+>                               || unique[i].x_org != m->mx || unique[i].y_org != m->my
+>                               || unique[i].width != m->mw || unique[i].height != m->mh)
+>                               {
+>                                       dirty = 1;
+>                                       m->num = i;
+>                                       m->mx = m->wx = unique[i].x_org;
+>                                       m->my = m->wy = unique[i].y_org;
+>                                       m->mw = m->ww = unique[i].width;
+>                                       m->mh = m->wh = unique[i].height;
+>                                       updatebarpos(m);
+>                               }
+>               } else { /* less monitors available nn < n */
+>                       for (i = nn; i < n; i++) {
+>                               for (m = mons; m && m->next; m = m->next);
+>                               while ((c = m->clients)) {
+>                                       dirty = 1;
+>                                       m->clients = c->next;
+>                                       detachstack(c);
+>                                       c->mon = mons;
+>                                       attach(c);
+>                                       attachstack(c);
+>                               }
+>                               if (m == selmon)
+>                                       selmon = mons;
+>                               cleanupmon(m);
+1916,1918d1912
+<                       if (m == selmon)
+<                               selmon = mons;
+<                       cleanupmon(m);
+1997d1990
+<       c->hintsvalid = 1;
+2058,2079d2050
+<
+<       if (((arg->ui & TAGMASK) == ((1 << 9) & TAGMASK)))
+<       {
+<               sendKeyEvent(XK_a);
+<               sendKeyEvent(XK_o);
+<       }
+<       else if (((arg->ui & TAGMASK) == ((1 << 7) & TAGMASK)))
+<       {
+<               Arg a;
+<               a.v = (const char*[]){"/bin/sh", "-c", "chromium $(xclip -o -selection clipboard)", NULL};
+<               spawn(&a);
+<       }
+<       else if (((arg->ui & TAGMASK) == ((1 << 6) & TAGMASK)))
+<       {
+<               Arg a;
+<
+<               a.v = (const char*[]){"/bin/sh", "-c", "xsetwacom set \"HUION H420 stylus\" PressureCurve 0 100 0 0", NULL};
+<               spawn(&a);
+<
+<               a.v = (const char*[]){"/bin/sh", "-c", "xsetwacom set \"HUION H420 stylus\" MapToOutput DVI-D-0", NULL};
+<               spawn(&a);
+<       }
+2153,2155c2124,2125
+<       if (!selmon->lt[selmon->sellt]->arrange || !c || c->isfloating)
+<               return;
+<       if (c == nexttiled(selmon->clients) && !(c = nexttiled(c->next)))
+---
+>       if (!selmon->lt[selmon->sellt]->arrange
+>       || (selmon->sel && selmon->sel->isfloating))
+2156a2127,2129
+>       if (c == nexttiled(selmon->clients))
+>               if (!c || !(c = nexttiled(c->next)))
+>                       return;
+2160,2314d2132
+< void
+< warp(const Client *c)
+< {
+<       int x, y;
+<
+<       if (!c) {
+<               XWarpPointer(dpy, None, root, 0, 0, 0, 0, selmon->wx + selmon->ww/2, selmon->wy + selmon->wh/2);
+<               return;
+<       }
+<
+<       if (!getrootptr(&x, &y) ||
+<           (x > c->x - c->bw &&
+<            y > c->y - c->bw &&
+<            x < c->x + c->w + c->bw*2 &&
+<            y < c->y + c->h + c->bw*2) ||
+<           (y > c->mon->by && y < c->mon->by + bh) ||
+<           (c->mon->topbar && !y))
+<               return;
+<
+<       XWarpPointer(dpy, None, c->win, 0, 0, 0, 0, c->w / 2, c->h / 2);
+< }
+<
+< void
+< sendKeyEvent(KeySym s)
+< {
+<       XKeyEvent event;
+<
+<       event.time = CurrentTime;
+<     event.display = dpy;
+<       event.window = selmon->sel->win;
+<       event.root = root;
+<       event.subwindow = None;
+<       event.x = 1;
+<       event.y = 1;
+<       event.x_root = 1;
+<       event.y_root = 1;
+<       event.same_screen = True;
+<       event.keycode = XKeysymToKeycode(dpy, s);
+<       event.state = 0;
+<       event.type = KeyPress;
+<
+<     XSendEvent(dpy, event.window, True, KeyPressMask, (XEvent *)&event);
+< }
+<
+< void
+< defining()
+< {
+<       sendKeyEvent(XK_a);
+<       sendKeyEvent(XK_o);
+< }
+<
+< void
+< musicchannel(const Arg *arg)
+< {
+<       Arg a;
+<
+<       // focus 2nd monitor
+<       a.i = -1;
+<       focusmon(&a);
+<
+<     // Find the window which has the current keyboard focus
+<     //XGetInputFocus(dpy, &winFocus, &revert);
+<
+<     // Register an interest to the x11 application to receive events
+<     // This client wants to receive key-press and key-release events associated with winFocus
+<     //XSelectInput(dpy, winFocus, KeyPressMask|KeyReleaseMask);
+<
+<     // Send a fake key press event to the window
+<       sendKeyEvent(XK_m);
+<
+<       // Switch to new tag
+<       a.ui = 1 << (arg->ch - 1);
+<       view(&a);
+<
+<     // Find the window which has the current keyboard focus
+<     //XGetInputFocus(dpy, &winFocus, &revert);
+<
+<     // Register an interest to the x11 application to receive events
+<     // This client wants to receive key-press and key-release events associated with winFocus
+<     //XSelectInput(dpy, winFocus, KeyPressMask|KeyReleaseMask);
+<
+<     // Send a fake key press event to the window
+<       sendKeyEvent(XK_m);
+<
+<       // Switch back to 1st monitor
+<       a.i = -1;
+<       focusmon(&a);
+< }
+<
+< void
+< realshit(const Arg* arg)
+< {
+<       Arg a;
+<       Monitor *m;
+<       m = dirtomon(-1);
+<       // if on either monitor im not on tag 9 do:
+<       if ((((1 << 8) & TAGMASK) != selmon->tagset[selmon->seltags]) || (((1 << 8) & TAGMASK) != m->tagset[m->seltags]))
+<       {
+<               a.ui = 1 << 8;
+<               view(&a);
+<               a.i = -1;
+<               focusmon(&a);
+<               a.ui = 1 << 8;
+<               view(&a);
+<       }
+<
+<       // else restore to prev (do something bout that second statement!)
+<       else
+<       {
+<               a.ui = 0;
+<               view(&a);
+<               a.i = -1;
+<               focusmon(&a);
+<               a.ui = 0;
+<               view(&a);
+<       }
+< }
+<
+< /* void */
+< /* runProgram() */
+< /* { */
+< /*    Arg a; */
+< /*    a.v = (const char*[]){"/bin/sh", "-c", "qutebrowser ':set-cmd-text -s :spawn --userscript find_definition.sh'", NULL}; */
+< /*    spawn(&a); */
+< /* } */
+<
+< void
+< prerun()
+< {
+<       Arg a;
+<
+<       a.v = (const char*[]){"/bin/sh", "-c", "scripts/autostart.sh", NULL};
+<       spawn(&a);
+<
+<       FILE *f = fopen(".value", "r");
+<       int c = fgetc(f);
+<
+<       a.ui = 1 << (c - 49);
+<       view(&a);
+<       a.i = -1;
+<       focusmon(&a);
+<       fclose(f);
+< }
+<
+<       /* tricks */
+<
+<       /* define SPAWN(cmd) a.v = (const char*[]){"/bin/sh", "-c", cmd, NULL} */
+<
+<       /* FILE *f = fopen("filename", "a"); */
+<       /* char str[21]; */
+<       /* sprintf(str, "%lu", selmon->sel->win); */
+<       /* fprintf(f, "Starting!\n"); */
+<       /* fprintf(f, "%s", str); */
+<       /* fclose(f); */
+<
+2333d2150
+<       prerun();
